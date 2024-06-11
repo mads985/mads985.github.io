@@ -1,23 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  background-image: url('test1.png');
-  background-repeat: no-repeat;
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.button1 {border-radius: 20px;}
-.button2 {border-radius: 20px;}
-.button1 {background-color: #04AA6D;} /* Green */
-.button2 {background-color: #008CBA;} /* Blue */
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mads985</title>
+    <!-- Placeholder for favicon -->
+    <link rel="icon" type="image/png" href="archlinux-512.png">
+    <!-- End of favicon placeholder -->
+
+    <style>
+        @font-face {
+            font-family: 'Daydream';
+            src: url('Daydream.ttf') format('truetype');
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('background.png'); /* Replace 'background.jpg' with your background image path */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative; /* Added */
+        }
+
+        .logo {
+            width: 250px; /* Adjust width as needed */
+            height: auto; /* Keeps aspect ratio */
+            margin-top: 50px; /* Adjust top margin as needed */
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px; /* Decreased top margin */
+            width: 60%; /* Adjust width as needed */
+        }
+
+        .button {
+            width: 160px; /* Adjust width as needed */
+            height: 90px; /* Adjust height as needed */
+            background-image: url('button.png'); /* Replace 'button_image.png' with your button image path */
+            background-size: cover;
+            background-position: center;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none; /* Disable underlines */
+        }
+
+        .button span {
+            text-align: center;
+            color: white;
+            font-family: 'Daydream', sans-serif;
+            font-size: 15px; /* Adjust font size */
+        }
+
+        .button:hover {
+            transform: scale(1.1); /* Scale up slightly on hover */
+        }
+
+        .image-container {
+            position: absolute; /* Added */
+            bottom: 20px; /* Adjust distance from bottom as needed */
+            display: flex;
+            justify-content: space-around;
+            width: 100%; /* Adjust width as needed */
+        }
+
+        .image {
+            width: 100px; /* Adjust width as needed */
+            height: auto; /* Keeps aspect ratio */
+        }
+    </style>
 </head>
 <body>
-<img src="logo.png" alt="logo.png" style="width:50">
+    <audio id="hoverSound">
+        <source src="hover_sound.mp3" type="audio/mp3"> <!-- Replace 'hover_sound.mp3' with your sound file path -->
+    </audio>
+
+    <img src="mads985.png" alt="Logo" class="logo"> <!-- Replace 'logo.png' with your logo image path -->
+
+    <div class="buttons">
+        <a href="https://modrinth.com/user/mads985" class="button" onmouseover="playHoverSound()"><span>Modrinth</span></a>
+        <a href="https://www.fiverr.com/s/4v5L6R" class="button" onmouseover="playHoverSound()"><span>Pixel Art</span></a>
+        <a href="https://github.com/mads985" class="button" onmouseover="playHoverSound()"><span>Github</span></a>
+        <a href="https://www.youtube.com/watch?v=3kNPEOqCBEE" class="button" onmouseover="playHoverSound()"><span>My Feet</span></a>
+    </div>
+
+    <script>
+        function playHoverSound() {
+            var sound = document.getElementById("hoverSound");
+            sound.play();
+        }
+    </script>
 </body>
 </html>
