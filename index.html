@@ -1,107 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mads985</title>
-    <!-- Placeholder for favicon -->
-    <link rel="icon" type="image/png" href="archlinux-512.png">
-    <!-- End of favicon placeholder -->
-
-    <style>
+    <title>madelineb.dev site</title>
+    <link rel="icon" type="./favi.png" href="./favi.png">
+    <style type="text/css">
         @font-face {
-            font-family: 'Daydream';
-            src: url('Daydream.ttf') format('truetype');
+            font-family: 'Tetris';
+            src: url('./tetris.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
         }
-
         body {
+            background: #E7EDF2 url(https://cdn.discordapp.com/attachments/1010283547086561383/1329562286091796551/tetris-wallpaper.png?ex=678acadf&is=6789795f&hm=dace22265d7ed24f2d1611b319cb54feaf61aab5781340e6c1f84ff4cc004a0b&) fixed;
+            font-family: 'Tetris';
+            text-shadow: 0px 0px 1px #b3b3b3;
+            font-size: 4px;
+            color: #FFF;
+            letter-spacing: 1px;
             margin: 0;
             padding: 0;
-            background-image: url('background.png'); /* Replace 'background.jpg' with your background image path */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            position: relative; /* Added */
+            min-height: 100vh;
+            text-align: center;
         }
-
-        .logo {
-            width: 250px; /* Adjust width as needed */
-            height: auto; /* Keeps aspect ratio */
-            margin-top: 50px; /* Adjust top margin as needed */
+        #wrapper {
+            width: 560px;
         }
-
-        .buttons {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px; /* Decreased top margin */
-            width: 60%; /* Adjust width as needed */
-        }
-
-        .button {
-            width: 160px; /* Adjust width as needed */
-            height: 90px; /* Adjust height as needed */
-            background-image: url('button.png'); /* Replace 'button_image.png' with your button image path */
-            background-size: cover;
-            background-position: center;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-            position: relative;
+        #navigationwrap, #textboxwrap {
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            text-decoration: none; /* Disable underlines */
+            margin-bottom: 10px;
         }
-
-        .button span {
-            text-align: center;
-            color: white;
-            font-family: 'Daydream', sans-serif;
-            font-size: 15px; /* Adjust font size */
+        #navigation, #textbox {
+            line-height: 20px;
+            background: #000;
+            border-width: 7px;
+            border-style: solid;
+            border-image: url("https://cdn.discordapp.com/attachments/1010283547086561383/1329561671252971520/bordertest.png?ex=678aca4c&is=678978cc&hm=ade3ef56c285846373802173c1a7b4911b3793f2f6a01faf2ff5525ba79634f4&") 8 fill round;
+            padding: 5px;
         }
-
-        .button:hover {
-            transform: scale(1.1); /* Scale up slightly on hover */
+        #navigation {
+            width: 560px;
+            height: 320px;
+            margin-bottom: 10px;
         }
-
-        .image-container {
-            position: absolute; /* Added */
-            bottom: 20px; /* Adjust distance from bottom as needed */
-            display: flex;
-            justify-content: space-around;
-            width: 100%; /* Adjust width as needed */
+        #textbox {
+            width: 400px;
+            height: 20px;
         }
-
-        .image {
-            width: 100px; /* Adjust width as needed */
-            height: auto; /* Keeps aspect ratio */
+        #textbox p {
+            font-size: 18px;
+            margin: 0;
+        }
+        iframe {
+            display: block;
+            margin: 0 auto;
         }
     </style>
 </head>
 <body>
-    <audio id="hoverSound">
-        <source src="quack_5.mp3" type="audio/mp3"> <!-- Replace 'hover_sound.mp3' with your sound file path -->
-    </audio>
-
-    <img src="mads985.png" alt="Logo" class="logo"> <!-- Replace 'logo.png' with your logo image path -->
-
-    <div class="buttons">
-        <a href="https://modrinth.com/user/mads985" class="button" onmouseover="playHoverSound()"><span>Modrinth</span></a>
-        <a href="https://www.fiverr.com/s/4v5L6R" class="button" onmouseover="playHoverSound()"><span>Pixel Art</span></a>
-        <a href="https://github.com/mads985" class="button" onmouseover="playHoverSound()"><span>Github</span></a>
-        <a href="https://www.youtube.com/watch?v=3kNPEOqCBEE" class="button" onmouseover="playHoverSound()"><span>My Feet</span></a>
+    <div id="wrapper">
+        <div id="navigationwrap">
+            <div id="navigation">
+                <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/Jr9Kaa1sycs?si=KDHah9srOTqaMqly" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        <div id="textboxwrap">
+            <div id="textbox">
+                <p>- MADELINEB -</p>
+            </div>
+        </div>
     </div>
-
-    <script>
-        function playHoverSound() {
-            var sound = document.getElementById("hoverSound");
-            sound.play();
-        }
-    </script>
 </body>
 </html>
